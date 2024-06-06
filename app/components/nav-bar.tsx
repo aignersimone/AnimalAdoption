@@ -5,7 +5,7 @@ export function NavBar() {
     <header className="border-b items-baseline py-4 px-5">
       <nav className="flex gap-3 text-sm">
         <Link to="/app" className="px-3 py-1 font-bold hover:bg-accent rounded-sm  tracking-tight uppercase">
-          Little Paws
+          <img src="app/img/little_paws.svg" alt="Logo_Littlepaws"/>
         </Link>
 
         <Link to="/about" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
