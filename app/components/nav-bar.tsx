@@ -13,7 +13,7 @@ export function NavBar() {
             Über uns
           </Link>
 
-          <Link to="/pricing" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
+          <Link to="/adoption" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
             Adoptionsverfahren
           </Link>
 
