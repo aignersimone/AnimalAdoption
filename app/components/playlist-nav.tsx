@@ -1,6 +1,6 @@
 import { Link } from '@remix-run/react';
 import { useQuery } from '@tanstack/react-query';
-import { ListMusic, ListPlus } from 'lucide-react';
+import { BookHeart, ListPlus } from 'lucide-react';
 import { playlistQueryOptions } from '~/apis/playlist-api';
 import LoadingSpinner from './loading-spinner';
 
@@ -14,14 +14,14 @@ export function PlaylistNav() {
       {isSuccess
         ? data?.map((playlist) => (
             <Link key={playlist.id} className="sidebar_link" to={`/app/playlists/${playlist.id}`}>
-              <ListMusic />
+              <BookHeart />
               {playlist.title}
             </Link>
           ))
         : null}
 
       <Link className="sidebar_link" to="/app/playlists/new">
-        <ListPlus /> Create new playlist
+        <ListPlus /> Add new Animal
       </Link>
     </div>
   );
