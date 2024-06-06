@@ -4,7 +4,7 @@ import { BookHeart, ListPlus } from 'lucide-react';
 import { playlistQueryOptions } from '~/apis/playlist-api';
 import LoadingSpinner from './loading-spinner';
 
-export function PlaylistNav() {
+export function AdoptionappNav() {
   const { data, isSuccess, isLoading } = useQuery(playlistQueryOptions);
 
   return (

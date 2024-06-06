@@ -18,7 +18,7 @@ export function NavBar() {
           </Link>
 
           <Link to="/contact" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
-            Contact
+            Kontakt
           </Link>
         </nav>
       </header>
