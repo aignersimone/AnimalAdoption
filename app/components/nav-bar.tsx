@@ -2,24 +2,25 @@ import { Link } from '@remix-run/react';
 
 export function NavBar() {
   return (
-    <header className="border-b items-baseline py-4 px-5">
-      <nav className="flex gap-3 text-sm">
-        <Link to="/app" className="px-3 py-1 font-bold hover:bg-accent rounded-sm  tracking-tight uppercase">
-          <img src="app/img/little_paws.svg" alt="Logo_Littlepaws"/>
-        </Link>
+      <header className="border-b py-4 px-5 flex flex-col items-center justify-center">
+        <div>
+          <Link to="/app" className="px-3 py-1 font-bold hover:bg-accent rounded-sm  tracking-tight uppercase">
+            <img src="app/img/little_paws.svg" alt="Logo_Littlepaws" width={100} height={100}/>
+          </Link>
+        </div>
+        <nav className="flex gap-3 text-sm">
+          <Link to="/about" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
+            Über uns
+          </Link>
 
-        <Link to="/about" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
-          About
-        </Link>
+          <Link to="/pricing" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
+            Adoptionsverfahren
+          </Link>
 
-        <Link to="/pricing" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
-          Pricing
-        </Link>
-
-        <Link to="/contact" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
-          Contact
-        </Link>
-      </nav>
-    </header>
+          <Link to="/contact" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
+            Contact
+          </Link>
+        </nav>
+      </header>
   );
 }
