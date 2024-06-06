@@ -9,6 +9,9 @@ export function NavBar() {
           </Link>
         </div>
         <nav className="flex gap-3 text-sm">
+            <Link to="/app" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
+                Home
+            </Link>
           <Link to="/about" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
             Über uns
           </Link>
