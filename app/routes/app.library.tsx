@@ -1,60 +1,55 @@
-import Tabs from '~/components/tabs';
-import {fetchTracks} from "~/apis/track-api";
-import {useLoaderData, useSearchParams} from "@remix-run/react";
-import {TrackCardList} from "~/components/track-card-list";
-import {LoaderFunctionArgs} from "@remix-run/router";
+import { useEffect, useState } from 'react';
+import {fetchAnimals} from "~/apis/animal-api";
+import {AnimalCard} from "~/components/animal-card";
+import {AnimalCardList} from "~/components/animal-card-list";
 
 
-export async function loader({request}: LoaderFunctionArgs){
-  const url = new URL(request.url)
-  const type = url.searchParams.get('type') ||  tabs[0].id;
+export default function AppLibrary() {
+    const [animals, setAnimals] = useState(null);
 
-  const tracks = await fetchTracks();
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                // Rufe die Tierdaten ab
+                const fetchedAnimals = await fetchAnimals();
+                // Setze die geladenen Daten im State
+                setAnimals(fetchedAnimals);
+            } catch (error) {
+                console.error('Error fetching animals:', error);
+            }
+        };
 
-  const filteredTracks = tracks.filter(track =>{
-    return track.type === type ;
+        // Rufe die fetchData-Funktion auf, um die Daten zu laden, wenn die Komponente montiert wird
+        fetchData();
+    }, []);
 
-  })
+    return (
+        <>
+            <h1>Unsere Vergabetiere</h1>
+            <p className="text-muted-foreground text-sm">Your home. Your music.</p>
 
-  return{
-    tracks: filteredTracks,
-  };
+            <AnimalCardList animals={animals}/>
+            {/*<div className="mt-5">
+                {animals ? (
+                    // Wenn die Tierdaten geladen wurden, rendern Sie sie
+                    <ul>
+                        {animals.map((animal, index) => (
+                            <li key={index}>
+                                <h2>{animal.name}</h2>
+                                <p>Type: {animal.type}</p>
+                                <p>Breed: {animal.breed}</p>
+                                <img src={animal.image} alt={animal.name} />
+                                <p>Description: {animal.description}</p>
+                                <p>Location: {animal.location}</p>
+                            </li>
+                        ))}
+                    </ul>
+                ) : (
 
-}
-
-// export async function clientLoader(){
-//   const response = await fetch('/api/tracks');
-//   const tracks = await response.json();
-//   return tracks;
-// }
-
-const tabs = [
-  { id: 'song', title: 'Music' },
-  { id: 'podcast', title: 'Podcasts' },
-  { id: 'audiobooks', title: 'Audiobooks', disabled: true },
-];
-
-export default function Library() {
-  const data = useLoaderData<typeof loader>();
-  const tracks = data.tracks;
-  const [searchParams, setSearchParams] = useSearchParams();
-  const activeTabId = searchParams.get('type') ?? tabs[0].id;
-
-  const onTypeChange = (newType: string) => {
-    setSearchParams((params) => {
-      params.set('type', newType);
-      return params;
-    });
-  };
-
-  return (
-    <>
-      <h1>Library</h1>
-      <p className="text-muted-foreground text-sm">Your Tracks. Your library.</p>
-
-      <Tabs className="my-10" tabs={tabs} activeTabId={activeTabId} onValueChange={onTypeChange}></Tabs>
-
-      <TrackCardList tracks={tracks}></TrackCardList>
-    </>
-  );
+                    // Ansonsten zeige einen Ladeindikator oder eine Meldung an
+                    <p>Loading animals...</p>
+                )}
+            </div>*/}
+        </>
+    );
 }

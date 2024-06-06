@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Max",
+    "type": "Dog",
+    "breed": "Golden Retriever",
+    "image": "https://www.zoo24.at/cdn/shop/articles/golden-retriever.jpg?v=1714469720&width=2048",
+    "description": "Max is a friendly and playful dog looking for a loving home.",
+    "location": "New York"
+  },
+  {
+    "id": "2",
+    "name": "Bella",
+    "type": "Cat",
+    "breed": "Siamese",
+    "image": "https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/fca42f04-2474-4302-a238-990c8aebfe8c/Siamese_cat_1110x740.jpg?w=3840&q=75&auto=format",
+    "description": "Bella is a sweet and affectionate cat who enjoys cuddles.",
+    "location": "Los Angeles"
+  },
+  {
+    "id": "3",
+    "name": "Charlie",
+    "type": "Dog",
+    "breed": "Labrador Retriever",
+    "image": "https://www.deine-hundeschule.at/wp-content/uploads/2016/10/shutterstock_297513161.jpg",
+    "description": "Charlie is an energetic and loyal dog ready for outdoor adventures.",
+    "location": "Chicago"
+  },
+  {
+    "id": "4",
+    "name": "Luna",
+    "type": "Cat",
+    "breed": "Maine Coon",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvGjfdLZ384T7qAmjRmxlp3RjlCJRnYhR-dw&s",
+    "description": "Luna is a curious and independent cat who loves to explore her surroundings.",
+    "location": "Houston"
+  }
+]
