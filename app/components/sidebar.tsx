@@ -6,7 +6,7 @@ export function Sidebar() {
   return (
     <div className="sidebar">
       <section>
-        <h2 className="mb-2">Discover</h2>
+        <h2 className="mb-2">Tieradoption</h2>
 
         <div className="space-y-1">
           <Link to="/app" className="sidebar_link">
@@ -16,18 +16,18 @@ export function Sidebar() {
 
           <Link to="/app/library" className="sidebar_link">
             <LayoutGrid />
-            Library
+            Vergabetiere
           </Link>
 
           <Link to="/app/playlists" className="sidebar_link">
             <ListMusic />
-            Your Playlists
+            Meine Favoriten
           </Link>
         </div>
       </section>
 
       <section>
-        <h2 className="mb-2">Playlists</h2>
+        <h2 className="mb-2">Mein Lieblingstiere </h2>
 
         <PlaylistNav></PlaylistNav>
       </section>
