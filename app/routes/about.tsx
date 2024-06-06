@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className="mx-auto mt-28 max-w-4xl text-justify">
+    <main className="mx-auto my-28 max-w-4xl text-justify">
       <h1>Willkommen bei "Little Paws"!</h1>
       <p className="mt-4"> </p>
       <p className="mt-4">
