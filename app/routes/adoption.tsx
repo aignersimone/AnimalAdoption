@@ -1,7 +1,7 @@
-export default function Pricing() {
+export default function Adoption() {
   return (
-    <main className="mx-auto mt-28 max-w-md">
-      <h1>Pricing</h1>
+    <main className="mx-auto mt-28 max-w-4xl text-justify">
+      <h1>Adoptionsverfahren</h1>
       <p className="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ad, nam optio neque doloribus vero at a accusamus necessitatibus doloremque.</p>
       <p className="mt-4">
         Sapiente molestiae voluptate molestias. Maxime nemo voluptatum vel veritatis velit laborum rerum assumenda, eius nesciunt dignissimos ea, ipsum, voluptas mollitia.
