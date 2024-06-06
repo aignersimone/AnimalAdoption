@@ -1,4 +1,4 @@
-import { Home, LayoutGrid, ListMusic } from 'lucide-react';
+import { Hotel, LayoutGrid, ListMusic } from 'lucide-react';
 import { PlaylistNav } from './playlist-nav';
 import { Link } from '@remix-run/react';
 
@@ -10,7 +10,7 @@ export function Sidebar() {
 
         <div className="space-y-1">
           <Link to="/app" className="sidebar_link">
-            <Home />
+            <Hotel />
             Home
           </Link>
 
