@@ -2,6 +2,8 @@
   {
     "id": "1",
     "name": "Max",
+    "age": "1 year",
+    "castrated": "yes",
     "type": "Dog",
     "breed": "Golden Retriever",
     "image": "https://www.zoo24.at/cdn/shop/articles/golden-retriever.jpg?v=1714469720&width=2048",
@@ -11,6 +13,8 @@
   {
     "id": "2",
     "name": "Bella",
+    "age": "8 years",
+    "castrated": "no",
     "type": "Cat",
     "breed": "Siamese",
     "image": "https://assets.elanco.com/8e0bf1c2-1ae4-001f-9257-f2be3c683fb1/fca42f04-2474-4302-a238-990c8aebfe8c/Siamese_cat_1110x740.jpg?w=3840&q=75&auto=format",
@@ -20,6 +24,8 @@
   {
     "id": "3",
     "name": "Charlie",
+    "age": "5 months",
+    "castrated": "yes",
     "type": "Dog",
     "breed": "Labrador Retriever",
     "image": "https://www.deine-hundeschule.at/wp-content/uploads/2016/10/shutterstock_297513161.jpg",
@@ -29,10 +35,45 @@
   {
     "id": "4",
     "name": "Luna",
+    "age": "5 years",
+    "castrated": "yes",
     "type": "Cat",
     "breed": "Maine Coon",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvGjfdLZ384T7qAmjRmxlp3RjlCJRnYhR-dw&s",
     "description": "Luna is a curious and independent cat who loves to explore her surroundings.",
     "location": "Houston"
+  },
+  {
+    "id": "5",
+    "name": "Pasha",
+    "age": "2 years and 9 months",
+    "castrated": "no",
+    "type": "Dog",
+    "breed": "American Staffordshire Terrier",
+    "image": "https://media.os.fressnapf.com/cms/2020/07/ratgeber_hund_rasse_portraits_american-staffordshire-terrier_1200x527.jpg?t=seoimgsqr_527",,
+    "description": "This male dog was secured by the police in Wels and brought to our shelter by the animal rescue service. None of the people found are allegedly the dog's current owner. This sporty lad is initially reserved around strangers, but once he has taken someone to his heart, he is a cuddly and obedient fellow who has probably already had some training. Unfortunately, he does not enjoy other animals.",
+    "location": "Houston"
+  },
+  {
+    "id": "6",
+    "name": "Cody",
+    "age": "10 months",
+    "castrated": "yes",
+    "type": "Dog",
+    "breed": "Alaskan Husky",
+    "image": "https://www.dogster.com/wp-content/uploads/2024/03/husky-outdoor-barking_Sanchoz_Shutterstock.jpg",
+    "description": "Unfortunately, this friendly boy has not yet learned to stay alone. Otherwise, Cody is a very friendly and open-minded guy who still needs some training.",
+    "location": "Brooklyn"
+  },
+  {
+    "id": "7",
+    "name": "Churro",
+    "age": "1 year and 5 months",
+    "castrated": "no",
+    "type": "Dog",
+    "breed": "American Staffordshire Terrier-Mix",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/American_Staffordshire_Terrier%28Cleo%29.JPG/640px-American_Staffordshire_Terrier%28Cleo%29.JPG",
+    "description": "Churro had probably already been through a few stops in his life before he ended up at our shelter. This lively youngster has had no training and has probably grown up quite isolated. He needs dog-experienced people to help him channel his energy into the right direction and discover the good things in life.",
+    "location": "Brooklyn"
   }
 ]
