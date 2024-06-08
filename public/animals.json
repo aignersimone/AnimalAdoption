@@ -306,5 +306,38 @@
     "image": "https://curiodyssey.org/wp-content/uploads/2021/05/animal-dutch-rabbit.jpg",
     "description": "Hopper is an active and curious rabbit who loves to hop around and explore.",
     "location": "Indianapolis"
+  },
+  {
+    "id": "29",
+    "name": "Pepper",
+    "age": "1 year",
+    "castrated": "yes",
+    "type": "Rabbit",
+    "breed": "Holland Lop",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Holland_lop_rabbit.jpg/2560px-Holland_lop_rabbit.jpg",
+    "description": "Pepper is a lively and playful rabbit who loves to interact with people and explore new environments.",
+    "location": "Portland"
+  },
+  {
+    "id": "30",
+    "name": "Fluffy",
+    "age": "2 years",
+    "castrated": "no",
+    "type": "Rabbit",
+    "breed": "Lionhead",
+    "image": "https://www.shutterstock.com/image-photo/cute-portrait-lionhead-rabbit-green-600nw-779234086.jpg",
+    "description": "Fluffy is a gentle and affectionate rabbit who enjoys being petted and spending time with humans.",
+    "location": "Seattle"
+  },
+  {
+    "id": "31",
+    "name": "Cinnamon",
+    "age": "3 years",
+    "castrated": "yes",
+    "type": "Rabbit",
+    "breed": "Rex",
+    "image": "https://images.squarespace-cdn.com/content/v1/5bb56e2290f904412702cc2e/1538674334825-SNYCXGCQKI3OH89BP90R/IMG_20180511_190858.jpg",
+    "description": "Cinnamon is a calm and curious rabbit who loves to explore and enjoys gentle interactions.",
+    "location": "Denver"
   }
 ]
