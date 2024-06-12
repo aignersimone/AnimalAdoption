@@ -24,10 +24,10 @@ export default function AppFavorites() {
 
     return (
         <>
-            <h1>My Favorites</h1>
-            <p className="text-muted-foreground text-sm">Find your best friend.</p>
+            <h1>Meine Favoriten</h1>
+            <p className="text-muted-foreground text-sm">Finde deinen besten Freund.</p>
 
-            <AnimalCardList animals={animals}/>
+            <AnimalCardList animals={animals} />
         </>
     );
 }

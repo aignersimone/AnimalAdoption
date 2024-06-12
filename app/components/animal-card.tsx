@@ -11,6 +11,7 @@ export function AnimalCard({ animal }) {
         setIsFavorite(!isFavorite);
     };
 
+
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-4 card">
             <img src={animal.image} alt={animal.name} className="w-full" />

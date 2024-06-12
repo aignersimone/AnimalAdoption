@@ -11,5 +11,5 @@ export type Animal = {
         image: string;
         description: string;
         location: string;
-        liked: boolean;
+        liked: string;
 };
