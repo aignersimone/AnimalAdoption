@@ -11,8 +11,9 @@ export function AnimalCard({ animal }) {
         setIsFavorite(!isFavorite);
     };
 
+
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-4">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-4 card">
             <img src={animal.image} alt={animal.name} className="w-full" />
             <div className="px-6 py-4">
                 <div className="flex justify-between items-center">
@@ -30,8 +31,8 @@ export function AnimalCard({ animal }) {
                     </button>
                 </div>
                 <p className="text-gray-700 text-base">
-                    <b>Type:</b> {animal.type}<br />
                     <b>Age: </b> {animal.age}<br />
+                    <b>Gender:</b> {animal.gender}<br />
                     <b>Breed:</b> {animal.breed}<br />
                     <b>Location:</b> {animal.location}
                 </p>

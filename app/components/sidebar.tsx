@@ -19,7 +19,7 @@ export function Sidebar() {
             Vergabetiere
           </Link>
 
-          <Link to="/app/playlists" className="sidebar_link">
+          <Link to="/app/favorites" className="sidebar_link">
             <HandHeart/>
             Meine Favoriten
           </Link>
