@@ -1,5 +1,4 @@
 import { Home, PawPrint, HandHeart } from 'lucide-react';
-import { AdoptionappNav } from './adoptionapp-nav';
 import { Link } from '@remix-run/react';
 
 
@@ -25,12 +24,6 @@ export function Sidebar() {
             Meine Favoriten
           </Link>
         </div>
-      </section>
-
-      <section>
-        <h2 className="mb-2">Mein Lieblingstiere </h2>
-
-        <AdoptionappNav></AdoptionappNav>
       </section>
     </div>
   );
