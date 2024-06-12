@@ -3,6 +3,8 @@ import { z } from 'zod';
 // Definiere das Schema für Tierdaten
 const animalSchema = z.object({
     name: z.string(),
+    age: z.string(),
+    castrated: z.string(),
     type: z.string(),
     breed: z.string(),
     image: z.string(),
@@ -16,6 +18,7 @@ const animalsSchema = z.array(animalSchema);
 // Funktion zum Abrufen von Tierdaten
 export async function fetchAnimals() {
     try {
+
         // Lade die Tierdaten von einer API oder einer lokalen JSON-Datei
         const response = await fetch('/animals.json');
         const animals = await response.json();

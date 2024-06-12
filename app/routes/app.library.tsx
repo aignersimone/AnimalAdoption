@@ -26,30 +26,9 @@ export default function AppLibrary() {
     return (
         <>
             <h1>Unsere Vergabetiere</h1>
-            <p className="text-muted-foreground text-sm">Your home. Your music.</p>
+            <p className="text-muted-foreground text-sm">Choose your partner for life.</p>
 
             <AnimalCardList animals={animals}/>
-            {/*<div className="mt-5">
-                {animals ? (
-                    // Wenn die Tierdaten geladen wurden, rendern Sie sie
-                    <ul>
-                        {animals.map((animal, index) => (
-                            <li key={index}>
-                                <h2>{animal.name}</h2>
-                                <p>Type: {animal.type}</p>
-                                <p>Breed: {animal.breed}</p>
-                                <img src={animal.image} alt={animal.name} />
-                                <p>Description: {animal.description}</p>
-                                <p>Location: {animal.location}</p>
-                            </li>
-                        ))}
-                    </ul>
-                ) : (
-
-                    // Ansonsten zeige einen Ladeindikator oder eine Meldung an
-                    <p>Loading animals...</p>
-                )}
-            </div>*/}
         </>
     );
 }

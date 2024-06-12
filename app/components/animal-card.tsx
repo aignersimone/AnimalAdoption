@@ -4,25 +4,6 @@ type AnimalCardInput = {
     animal: Animal;
 };
 
-/*
-export function AnimalCard({ animal }) {
-    return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-4">
-            <img src={animal.image} alt={animal.name} className="w-full" />
-            <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{animal.name}</div>
-                <p className="text-gray-700 text-base">
-                    Type: {animal.type}<br />
-                    Breed: {animal.breed}<br />
-                    Description: {animal.description}<br />
-                    Location: {animal.location}
-                </p>
-            </div>
-        </div>
-    );
-}
-*/
-
 export function AnimalCard({ animal }) {
     const [isFavorite, setIsFavorite] = useState(false);
 
@@ -49,10 +30,10 @@ export function AnimalCard({ animal }) {
                     </button>
                 </div>
                 <p className="text-gray-700 text-base">
-                    Type: {animal.type}<br />
-                    Breed: {animal.breed}<br />
-                    Description: {animal.description}<br />
-                    Location: {animal.location}
+                    <b>Type:</b> {animal.type}<br />
+                    <b>Age: </b> {animal.age}<br />
+                    <b>Breed:</b> {animal.breed}<br />
+                    <b>Location:</b> {animal.location}
                 </p>
             </div>
         </div>
