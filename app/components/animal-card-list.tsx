@@ -5,7 +5,6 @@ export function AnimalCardList({ animals }) {
 
     return (
         <>
-
             <div className="mt-5 flex card-list">
                 {animals ? (
                     <div className="flex flex-wrap ">

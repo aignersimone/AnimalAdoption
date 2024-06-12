@@ -11,7 +11,7 @@ const animalSchema = z.object({
     image: z.string(),
     description: z.string(),
     location: z.string(),
-    liked: z.string(),
+    liked: z.boolean(),
 });
 
 // Definiere das Schema für das Array von Tierdaten
