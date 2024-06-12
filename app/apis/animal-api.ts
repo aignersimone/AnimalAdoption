@@ -4,12 +4,14 @@ import { z } from 'zod';
 const animalSchema = z.object({
     name: z.string(),
     age: z.string(),
+    gender: z.string(),
     castrated: z.string(),
     type: z.string(),
     breed: z.string(),
     image: z.string(),
     description: z.string(),
     location: z.string(),
+    liked: z.boolean(),
 });
 
 // Definiere das Schema für das Array von Tierdaten

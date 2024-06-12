@@ -1,5 +1,4 @@
 import { playlistQueryOptions } from '~/apis/playlist-api';
-import { PlaylistCardList } from './../components/playlist-card-list';
 import { useQuery } from '@tanstack/react-query';
 import LoadingSpinner from '~/components/loading-spinner';
 
