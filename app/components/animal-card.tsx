@@ -28,7 +28,7 @@ export function AnimalCard({ animal }: AnimalCardInput) {
             <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-4 card">
                 <Link to={`/app/animal/${animal.id}`} className="card_link">
                 <img src={animal.image} alt={animal.name} className="w-full" />
-                </Link>
+
                 <div className="px-6 py-4">
                     <div className="flex justify-between items-center">
                         <div className="font-bold text-xl">{animal.name}</div>
@@ -41,6 +41,7 @@ export function AnimalCard({ animal }: AnimalCardInput) {
                         <b>Location:</b> {animal.location}
                     </p>
                 </div>
+                </Link>
             </div>
 
 
