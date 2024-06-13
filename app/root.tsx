@@ -2,7 +2,7 @@ import styles from '~/styles/style.css?url';
 import { Links, Meta, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { Provider } from 'react-redux';
-import { store } from './lib/store';
+import { store } from './store.client/store';
 import { queryClient } from './lib/clientQueryClient';
 import { NavBar } from './components/nav-bar';
 

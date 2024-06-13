@@ -1,5 +1,3 @@
-import {boolean} from "zod";
-
 export type Animal = {
         id: string;
         name: string;
@@ -11,5 +9,4 @@ export type Animal = {
         image: string;
         description: string;
         location: string;
-        liked: boolean;
 };

@@ -2,6 +2,7 @@
   max-width: 15rem;
   width: 100%;
   transition: transform 1s;
+  margin: 10px;
 }
 
 .card:hover {
@@ -52,7 +53,7 @@
     @apply sr-only;
   }
 
-  .card:hover & {
+  .card:hover {
     opacity: 0.9;
   }
 }

@@ -1,34 +1,21 @@
-import { useEffect, useState } from 'react';
-import { fetchAnimals } from "~/apis/animal-api";
-import Tabs from "~/components/tabs";
-import { AnimalCardList } from "~/components/animal-card-list";
-
-export default function AppLibrary() {
-    const [animals, setAnimals] = useState(null);
-    const [selectedTab, setSelectedTab] = useState('Dog'); // Standardmäßig den Tab 'dog' auswählen
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const fetchedAnimals = await fetchAnimals();
-                // Setze die geladenen Daten im State -> Herz
-                setAnimals(fetchedAnimals);
-            } catch (error) {
-                console.error('Error fetching animals:', error);
-            }
-        };
-        fetchData();
-    }, []);
+// app.bookshelf.tsx
+import { Animal } from '~/models/animal';
+import { AnimalCardList } from '~/components/animal-card-list';
+import { useAppSelector } from '~/store.client/store';
 
 
-    // Filtere wenn der Typ vom Animal übereinstimmt
-    const filteredAnimals = animals ? animals.filter(animal => animal.liked == true) : [];
+
+export default function AppFavorites() {
+    const favoriteAnimals = useAppSelector((state) => state.favorite.favoriteAnimals);
 
     return (
         <>
-            <h1>Unsere Vergabetiere</h1>
-            <p className="text-muted-foreground text-sm">Choose your partner for life.</p>
-            <AnimalCardList animals={filteredAnimals}/>
+            <h1>Marked Animals</h1>
+            <p className="text-muted-foreground text-sm">Your favorite Animals.</p>
+
+            <div className="mt-5">
+                <AnimalCardList animal={favoriteAnimals}></AnimalCardList>
+            </div>
         </>
     );
 }

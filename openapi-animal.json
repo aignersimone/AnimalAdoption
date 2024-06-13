@@ -2,52 +2,56 @@
   "openapi": "3.0.0",
   "info": {
     "version": "1.0.0",
-    "title": "Track API",
-    "description": "API for retrieving tracks"
+    "title": "Animal API",
+    "description": "API for retrieving animals"
   },
   "servers": [
     {
-      "url": "https://kwm24-api.vercel.app/",
+      "url": "https://animal-api-u6u2.onrender.com/my-api/animals.json",
       "description": "Main server"
     }
   ],
   "paths": {
-    "/api/tracks": {
+    "/api/animals": {
       "get": {
-        "summary": "Get tracks",
-        "description": "Get a list of tracks with optional filtering",
+        "summary": "Get animals",
+        "description": "Get a list of animals with optional filtering",
         "parameters": [
           {
-            "name": "artist",
+            "name": "name",
             "in": "query",
-            "description": "Filter tracks by artist",
+            "description": "Filter animals by name",
             "required": false,
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "title",
+            "name": "age",
             "in": "query",
-            "description": "Filter tracks by title",
+            "description": "Filter animals by age",
             "required": false,
             "schema": {
               "type": "string"
             }
           },
           {
-            "name": "genres",
+            "name": "gender",
             "in": "query",
-            "description": "Filter tracks by genres (comma-separated)",
+            "description": "Filter animals by gender",
             "required": false,
             "schema": {
-              "type": "array",
-              "items": {
                 "type": "string"
-              }
-            },
-            "style": "form",
-            "explode": true
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "Filter animals by type",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {
@@ -58,7 +62,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Track"
+                    "$ref": "#/components/schemas/Animal"
                   }
                 }
               }
@@ -67,18 +71,18 @@
         }
       }
     },
-    "/api/tracks/{id}": {
+    "/api/animals/{id}": {
       "get": {
-        "summary": "Get track by ID",
-        "description": "Get details of a track by its ID",
+        "summary": "Get animals by ID",
+        "description": "Get details of an animal by its ID",
         "parameters": [
           {
             "name": "id",
             "in": "path",
-            "description": "ID of the track",
+            "description": "ID of the animal",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "integer"
             }
           }
         ],
@@ -88,13 +92,13 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/TrackWithSrc"
+                  "$ref": "#/components/schemas/Animal"
                 }
               }
             }
           },
           "404": {
-            "description": "Track not found"
+            "description": "Animal not found"
           }
         }
       }
@@ -102,56 +106,50 @@
   },
   "components": {
     "schemas": {
-      "Track": {
+      "Animal": {
         "type": "object",
         "properties": {
           "id": {
             "type": "string"
           },
+          "name": {
+            "type": "string"
+          },
+          "age": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "string",
+            "enum": [
+              "male",
+              "female"
+            ]
+          },
+          "castrated": {
+            "type": "string"
+          },
           "type": {
             "type": "string",
-            "enum": ["podcast", "song", "audiobook"]
+            "enum": [
+              "Dog",
+              "Cat",
+              "Rabbit"
+            ]
           },
-          "artist": {
+          "breed": {
             "type": "string"
           },
-          "title": {
-            "type": "string"
-          },
-          "duration": {
-            "type": "number"
-          },
-          "releaseDate": {
-            "type": "string",
-            "format": "date"
-          },
-          "genres": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "coverUrl": {
+          "image": {
             "type": "string",
             "format": "uri"
+          },
+          "description": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
           }
         }
-      },
-      "TrackWithSrc": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Track"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "src": {
-                "type": "string",
-                "format": "uri"
-              }
-            }
-          }
-        ]
       }
     }
   }

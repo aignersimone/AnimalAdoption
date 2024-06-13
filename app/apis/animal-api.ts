@@ -2,6 +2,7 @@ import { z } from 'zod';
 
 // Definiere das Schema für Tierdaten
 const animalSchema = z.object({
+    id: z.string(),
     name: z.string(),
     age: z.string(),
     gender: z.string(),
@@ -11,7 +12,6 @@ const animalSchema = z.object({
     image: z.string(),
     description: z.string(),
     location: z.string(),
-    liked: z.boolean(),
 });
 
 // Definiere das Schema für das Array von Tierdaten
@@ -19,10 +19,8 @@ const animalsSchema = z.array(animalSchema);
 
 // Funktion zum Abrufen von Tierdaten
 export async function fetchAnimals() {
-    try {
-
         // Lade die Tierdaten von einer API oder einer lokalen JSON-Datei
-        const response = await fetch('/animals.json');
+        const response = await fetch("https://animal-api-u6u2.onrender.com/my-api/animals.json");
         const animals = await response.json();
 
         // Überprüfe, ob die geladenen Daten dem definierten Schema entsprechen
@@ -30,9 +28,25 @@ export async function fetchAnimals() {
 
         // Gib die geparsten Tierdaten zurück
         return parsedAnimals;
-    } catch (error) {
-        // Behandele Fehler, falls der Abruf fehlschlägt
-        console.error('Error fetching animals:', error);
-        throw error;
+}
+
+// Funktion zum Abrufen eines Buchs anhand der ID
+export async function fetchAnimalById(animalId: string) {
+    const response = await fetch("https://animal-api-u6u2.onrender.com/my-api/animals.json");
+    if (!response.ok) {
+        throw new Error('Failed to fetch animals');
     }
+
+    const animals = await response.json();
+    const animal = animals.find((animal: { id: string }) => animal.id == animalId);
+
+    if (!animal) {
+        throw new Error(`Book with ID ${animalId} not found`);
+    }
+
+    // Überprüfe, ob die geladenen Daten dem definierten Schema entsprechen
+    const parsedAnimals = animalsSchema.parse(animals);
+
+    // Gib die geparsten Tierdaten zurück
+    return parsedAnimals;
 }

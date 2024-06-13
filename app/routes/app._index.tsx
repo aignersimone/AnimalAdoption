@@ -1,6 +1,6 @@
 
-
 export default function AppHome() {
+
     return (
         <>
             <h1>Home</h1>
