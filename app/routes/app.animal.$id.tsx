@@ -1,42 +1,40 @@
+import { LoaderFunctionArgs } from '@remix-run/node';
+import { getAnimalById } from '~/storage.server/playlist-storage';
+import { useLoaderData } from '@remix-run/react';
+import {fetchAnimals} from "~/apis/animal-api";
 
-import { fetchAnimalById } from '~/apis/animal-api';
-import { useEffect, useState } from 'react';
-import {useParams} from "react-router-dom";
-import {Link} from "@remix-run/react";
-import {Animal} from "~/models/animal";
 
-export default function AnimalDetailPage() {
-    const { id } = useParams<{ id: string }>();
-
-    const [animalDetails, setAnimalDetails] = useState<Animal | null>(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        if (id) {
-            fetchAnimalById(id).then((animal) => {
-                setAnimalDetails(animal);
-                setLoading(false);
-            }).catch((error) => {
-                console.error(error);
-                setLoading(false);
-            });
-        }
-    }, [id]);
-
-    if (loading) {
-        return <div>Loading...</div>;
+export async function loader({ params }: LoaderFunctionArgs) {
+    const AnimalId = params['id'];
+    if (!AnimalId) {
+        throw Error('404');
     }
 
-    if (!animalDetails) {
-        return <div>Error: Animal not found</div>;
+    //const animal = await getAnimalById(AnimalId);
+    const animals = await fetchAnimals();
+
+    const filteredAnimal =  animals.find((animal) => animal.id === AnimalId);
+
+    return { animal: filteredAnimal };
+}
+
+export default function AnimalDetail() {
+    const data = useLoaderData<typeof loader>();
+    const animal = data.animal;
+
+    if (!animal) {
+        return <h1>Oops, we could not find your animal</h1>;
     }
 
     return (
-        <div>
-            <h1>{animalDetails.name}</h1>
-            <p>Alter: {animalDetails.age}</p>
-
-            <Link to="/app">Zurück zu den Tieren</Link>
-        </div>
+        <>
+            <img src={animal.image} alt={animal.name} />
+            <h1 className="mb-8">{animal.name}</h1>
+            <b>Age: </b> {animal.age}<br />
+            <b>Gender:</b> {animal.gender}<br />
+            <b>Breed:</b> {animal.breed}<br />
+            <b>Location:</b> {animal.location} <br/>
+            <b>Description:</b> {animal.description} <br/>
+        </>
     );
 }

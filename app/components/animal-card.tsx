@@ -1,8 +1,8 @@
 import { Animal } from '~/models/animal';
 import { favAction, notFavAction } from '~/store.client/favorite-reducer';
 import { useAppDispatch, useAppSelector } from '~/store.client/store';
-import {Heart, HeartOff} from "lucide-react";
 import {Link} from "@remix-run/react";
+import {FaHeart, FaRegHeart} from "react-icons/fa";
 
 type AnimalCardInput = {
     animal: Animal;
@@ -51,7 +51,7 @@ type FavoriteButtonProps = { isFavorite: boolean; onClick?: () => void };
 function FavoriteButton({ isFavorite = false, onClick }: FavoriteButtonProps) {
     return (
         <button type="button" className="icon-button" onClick={onClick}>
-            {isFavorite ? <Heart strokeWidth={1.5} /> : <HeartOff strokeWidth={1.5} />}
+            {isFavorite ? <FaHeart  /> : <FaRegHeart  />}
         </button>
     );
 }

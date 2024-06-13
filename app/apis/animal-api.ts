@@ -38,14 +38,15 @@ export async function fetchAnimalById(animalId: string) {
     }
 
     const animals = await response.json();
-    const animal = animals.find((animal: { id: string }) => animal.id == animalId);
-
+    console.log(animals);
+    const animal = animals.find((animal: { id: string }) => animal.id === animalId);
+    console.log(animal)
     if (!animal) {
         throw new Error(`Animal with ID ${animalId} not found`);
     }
 
     // Überprüfe, ob die geladenen Daten dem definierten Schema entsprechen
-    const parsedAnimals = animalsSchema.parse(animals);
+    const parsedAnimals = animalSchema.parse(animal);
 
     // Gib die geparsten Tierdaten zurück
     return parsedAnimals;
