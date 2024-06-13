@@ -24,15 +24,14 @@ export function AnimalCard({ animal }: AnimalCardInput) {
 
 
     return (
+        <div className="w-96 rounded overflow-hidden shadow-lg mx-auto mb-4 card">
+            <Link to={`/app/animal/${animal.id}`} className="card_link block">
+                <img src={animal.image} alt={animal.name} className="w-full h-64 object-cover" />
 
-            <div className="max-w-sm rounded overflow-hidden shadow-lg mx-auto mb-4 card">
-                <Link to={`/app/animal/${animal.id}`} className="card_link">
-                <img src={animal.image} alt={animal.name} className="w-full" />
-                </Link>
-                <div className="px-6 py-4">
-                    <div className="flex justify-between items-center">
+                <div className="px-6 py-4 bg-white">
+                    <div className="flex justify-between items-center mb-2">
                         <div className="font-bold text-xl">{animal.name}</div>
-                        <FavoriteButton isFavorite={isFavorite} onClick={toggleFavorite}></FavoriteButton>
+                        <FavoriteButton isFavorite={isFavorite} onClick={toggleFavorite} />
                     </div>
                     <p className="text-gray-700 text-base">
                         <b>Age: </b> {animal.age}<br />
@@ -41,10 +40,8 @@ export function AnimalCard({ animal }: AnimalCardInput) {
                         <b>Location:</b> {animal.location}
                     </p>
                 </div>
-
-            </div>
-
-
+            </Link>
+        </div>
     );
 }
 

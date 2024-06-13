@@ -35,7 +35,7 @@ export default function AppLibrary() {
         <>
             <h1>Unsere Vergabetiere</h1>
             <p className="text-muted-foreground text-sm">Choose your partner for life.</p>
-            <Tabs className="my-4" tabs={tabs} activeTabId={selectedTab} onValueChange={handleTabChange} />
+            <Tabs className="my-4" tabs={tabs} activeTabId={selectedTab} onValueChange={handleTabChange}  />
             <AnimalCardList animals={filteredAnimals} />
         </>
     );
