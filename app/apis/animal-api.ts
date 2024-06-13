@@ -41,7 +41,7 @@ export async function fetchAnimalById(animalId: string) {
     const animal = animals.find((animal: { id: string }) => animal.id == animalId);
 
     if (!animal) {
-        throw new Error(`Book with ID ${animalId} not found`);
+        throw new Error(`Animal with ID ${animalId} not found`);
     }
 
     // Überprüfe, ob die geladenen Daten dem definierten Schema entsprechen
