@@ -29,12 +29,13 @@ export default function AnimalDetail() {
     return (
         <>
             <img src={animal.image} alt={animal.name} />
-            <h1 className="mb-8">{animal.name}</h1>
-            <b>Age: </b> {animal.age}<br />
-            <b>Gender:</b> {animal.gender}<br />
-            <b>Breed:</b> {animal.breed}<br />
-            <b>Location:</b> {animal.location} <br/>
-            <b>Description:</b> {animal.description} <br/>
+            <h1 className="mt-8 mb-4">{animal.name}</h1>
+            <p className="mb-2"><b>Age: </b> {animal.age}</p>
+            <p className="mb-2"><b>Gender:</b> {animal.gender}</p>
+            <p className="mb-2"><b>Breed:</b> {animal.breed}</p>
+            <p className="mb-2"><b>Castrated:</b> {animal.castrated}</p>
+            <p className="mb-2"><b>Location:</b> {animal.location}</p>
+            <p className="mb-2"><b>Description:</b> {animal.description}</p>
         </>
     );
 }

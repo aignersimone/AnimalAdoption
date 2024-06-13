@@ -13,6 +13,8 @@ export default function AppLibrary() {
     const data = useLoaderData<typeof loader>();
     const animals = data.animals;
 
+
+
     return (
         <>
             <h1>Unsere Vergabetiere</h1>
