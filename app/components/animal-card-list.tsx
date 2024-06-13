@@ -10,7 +10,7 @@ export function AnimalCardList({ animals }:AnimalCardListProperties) {
         <>
             <ul className="mt-5 flex card-list">
                 {animals ? (
-                    <div className="flex flex-wrap ">
+                    <div className="flex flex-wrap gap-4">
                         {animals.map((animal) => (
                             <li key={animal.id}>
                             <AnimalCard  animal={animal}/>

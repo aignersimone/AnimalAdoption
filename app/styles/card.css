@@ -2,8 +2,8 @@
   max-width: 15rem;
   width: 100%;
   transition: transform 1s;
-  margin: 10px;
 }
+
 
 .card:hover {
   transform: scale(105%);
