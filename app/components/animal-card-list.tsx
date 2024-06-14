@@ -8,17 +8,15 @@ export function AnimalCardList({ animals }:AnimalCardListProperties) {
 
     return (
         <>
-            <ul className="mt-5 flex card-list">
+            <ul className="mt-5 flex justify-left flex-wrap gap-4 card-list">
                 {animals ? (
-                    <div className="flex flex-wrap gap-4">
-                        {animals.map((animal) => (
-                            <li key={animal.id}>
-                            <AnimalCard  animal={animal}/>
-                            </li>
-                        ))}
-                    </div>
+                    animals.map((animal) => (
+                        <li key={animal.id} className="list-none">
+                            <AnimalCard animal={animal} />
+                        </li>
+                    ))
                 ) : (
-                    // Ansonsten zeige einen Ladeindikator oder eine Meldung an
+                    // Show a loading indicator or a message if no animals are available
                     <p>Loading animals...</p>
                 )}
             </ul>
