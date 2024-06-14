@@ -1,5 +1,6 @@
 import {PawPrint} from "lucide-react";
 
+//Rückgabe der Darstellung der Contact-Seite
 export default function Contact() {
   return (
       <main className="mx-auto my-28 max-w-4xl text-justify">

@@ -1,8 +1,9 @@
 import {PawPrint} from "lucide-react";
 import {Link} from "@remix-run/react";
 
-export default function AppHome() {
 
+//Rückgabe der Darstellung der Home-Seite mit interner Verlinkung
+export default function AppHome() {
     return (
         <>
             <h1 className="text-3xl">Little Paws.</h1>

@@ -1,5 +1,4 @@
 import { LoaderFunctionArgs } from '@remix-run/node';
-import { getAnimalById } from '~/storage.server/playlist-storage';
 import { useLoaderData } from '@remix-run/react';
 import {fetchAnimals} from "~/apis/animal-api";
 import { Link } from '@remix-run/react';
@@ -7,27 +6,34 @@ import {MoveLeft} from "lucide-react";
 
 
 export async function loader({ params }: LoaderFunctionArgs) {
+    //aufgerufene AnimalId laden
     const AnimalId = params['id'];
+    //Fehler falls keine ID vorhanden
     if (!AnimalId) {
         throw Error('404');
     }
 
-    //const animal = await getAnimalById(AnimalId);
+    //alle Animals laden
     const animals = await fetchAnimals();
 
+    //das Tier mit der aufgerufenen ID aus allen Tieren suchen
     const filteredAnimal =  animals.find((animal) => animal.id === AnimalId);
 
+    //Das geladenene Tier zurückgeben
     return { animal: filteredAnimal };
 }
 
 export default function AnimalDetail() {
+    //Die Daten des Tieres mit dem loader laden
     const data = useLoaderData<typeof loader>();
     const animal = data.animal;
 
+    //wenn kein Tier erhalten wurde
     if (!animal) {
         return <h1>Oops, we could not find your animal</h1>;
     }
 
+    //Darstellung der Animal-Detailseite mit einem "zurück" Button
     return (
         <>
             <img src={animal.image} alt={animal.name} />
@@ -41,7 +47,7 @@ export default function AnimalDetail() {
             <button className="linkbtn my-4">
                 <Link to="/app/library">
                     <div className="flex flex-row items-center">
-                        <MoveLeft/>Back to adoption animals
+                        <MoveLeft/> <p className="ml-3">Back to adoption animals</p>
                     </div>
                 </Link>
             </button>

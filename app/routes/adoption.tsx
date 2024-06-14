@@ -2,6 +2,7 @@ import {PawPrint} from "lucide-react";
 
 import {Link} from "@remix-run/react";
 
+//Rückgabe der Darstellung der Adoption-Seite
 export default function Adoption() {
     return (
         <main className="mx-auto my-28 max-w-4xl text-justify">
