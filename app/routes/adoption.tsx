@@ -4,7 +4,7 @@ export default function Adoption() {
     return (
         <main className="mx-auto my-28 max-w-4xl text-justify">
             <div className="mt-3 flex flex-row gap-5">
-                <PawPrint /><h1>Adoption Process</h1>
+                <PawPrint className="linkcolor"/><h1>Adoption Process</h1>
             </div>
             <p className="mt-4">Thank you for your interest in adopting one of our animals! We want to ensure that each animal is placed in a loving and caring home. Our adoption process consists of several steps to ensure that the needs of the animal and the conditions of the new home are optimally met.</p>
             <li className="mt-4 ms-6">

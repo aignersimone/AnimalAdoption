@@ -4,7 +4,7 @@ export default function About() {
   return (
       <main className="mx-auto my-28 max-w-4xl text-justify">
           <div className="mt-3 flex flex-row gap-5">
-              <PawPrint /><h1>Welcome to Little Paws!</h1>
+              <PawPrint className="linkcolor"/><h1>Welcome to Little Paws!</h1>
           </div>
           <p className="mt-4"></p>
           <p className="mt-4">
