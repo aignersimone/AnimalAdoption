@@ -10,6 +10,7 @@ export const links = () => {
   return [{ rel: 'stylesheet', href: styles }];
 };
 
+//Layout definieren
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
