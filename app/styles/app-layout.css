@@ -3,6 +3,10 @@
   min-height: 100dvh;
   align-items: stretch;
 }
+.linkcolor, h1{
+  color: darkcyan;
+}
+
 
 .app-layout_content {
   flex: auto;
