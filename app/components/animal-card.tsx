@@ -4,15 +4,19 @@ import { useAppDispatch, useAppSelector } from '~/store.client/store';
 import {Link} from "@remix-run/react";
 import {FaHeart, FaRegHeart} from "react-icons/fa";
 
+
+//Definiere den Input der AnimalCard
 type AnimalCardInput = {
     animal: Animal;
 };
 
+//Definiere die AnimalCard
 export function AnimalCard({ animal }: AnimalCardInput) {
     const dispatch = useAppDispatch();
     const favoriteAnimals = useAppSelector((state) => state.favorite.favoriteAnimals);
     const isFavorite = favoriteAnimals.some(favoriteAnimal => favoriteAnimal.id === animal.id);
 
+    //Favorite-Handler - der immer bei Klick den Favoriten-Status auf dan Gegenteiligen umsetzt
     const toggleFavorite = () => {
         if (isFavorite) {
             dispatch(notFavAction({ animalId: animal.id }));
@@ -21,8 +25,7 @@ export function AnimalCard({ animal }: AnimalCardInput) {
         }
     };
 
-
-
+    //Gib die fertige Komponente zurück
     return (
         <div className="w-96 rounded overflow-hidden shadow-lg mx-auto mb-4 card">
             <Link to={`/app/animal/${animal.id}`} className="card_link block">
@@ -40,11 +43,11 @@ export function AnimalCard({ animal }: AnimalCardInput) {
                         <b>Location:</b> {animal.location}
                     </p>
                 </div>
-
         </div>
     );
 }
 
+//Definition des Favorite Buttons -> entweder volles oder leeres Herz von "react-icons/fa"
 type FavoriteButtonProps = { isFavorite: boolean; onClick?: () => void };
 function FavoriteButton({ isFavorite = false, onClick }: FavoriteButtonProps) {
     return (

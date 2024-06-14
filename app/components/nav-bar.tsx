@@ -1,5 +1,6 @@
 import { Link } from '@remix-run/react';
 
+//Definition der Navbar mit allen inkludierten Links
 export function NavBar() {
   return (
       <header className="border-b py-4 px-5 flex flex-col items-center justify-center">

@@ -30,13 +30,15 @@ export async function fetchAnimals() {
         return parsedAnimals;
 }
 
-// Funktion zum Abrufen eines Buchs anhand der ID
+// Funktion zum Abrufen eines Tieres anhand der ID
 export async function fetchAnimalById(animalId: string) {
+    // Lade die Tierdaten von einer API oder einer lokalen JSON-Datei
     const response = await fetch("https://animal-api-u6u2.onrender.com/my-api/animals.json");
     if (!response.ok) {
         throw new Error('Failed to fetch animals');
     }
 
+    //Filtere die Tiere nach der ID
     const animals = await response.json();
     console.log(animals);
     const animal = animals.find((animal: { id: string }) => animal.id === animalId);
