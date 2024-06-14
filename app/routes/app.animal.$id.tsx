@@ -2,6 +2,8 @@ import { LoaderFunctionArgs } from '@remix-run/node';
 import { getAnimalById } from '~/storage.server/playlist-storage';
 import { useLoaderData } from '@remix-run/react';
 import {fetchAnimals} from "~/apis/animal-api";
+import { Link } from '@remix-run/react';
+import {MoveLeft} from "lucide-react";
 
 
 export async function loader({ params }: LoaderFunctionArgs) {
@@ -36,6 +38,13 @@ export default function AnimalDetail() {
             <p className="mb-2"><b>Castrated:</b> {animal.castrated}</p>
             <p className="mb-2"><b>Location:</b> {animal.location}</p>
             <p className="mb-2"><b>Description:</b> {animal.description}</p>
+            <button className="linkbtn my-4">
+                <Link to="/app/library">
+                    <div className="flex flex-row items-center">
+                        <MoveLeft/>Back to adoption animals
+                    </div>
+                </Link>
+            </button>
         </>
     );
 }
