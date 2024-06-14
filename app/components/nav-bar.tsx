@@ -13,15 +13,15 @@ export function NavBar() {
                 Home
             </Link>
           <Link to="/about" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
-            Über uns
+            About
           </Link>
 
           <Link to="/adoption" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
-            Adoptionsverfahren
+              Adoption Procedure
           </Link>
 
           <Link to="/contact" className="px-3 py-1 font-medium hover:bg-accent rounded-sm">
-            Kontakt
+            Contact
           </Link>
         </nav>
       </header>

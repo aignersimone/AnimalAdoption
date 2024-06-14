@@ -1,31 +1,35 @@
+import {PawPrint} from "lucide-react";
+
 export default function Contact() {
   return (
-    <main className="mx-auto mt-28 max-w-4xl text-justify">
-      <h1>Kontaktieren Sie uns!</h1>
-        <p>
-            Vielen Dank für dein Interesse an unserer Tieradoptions-Website! Wir freuen uns über deine Fragen, Anregungen und Feedback.
-        </p>
-        <div className="my-2">
-            <h2>Kontaktinformation:</h2>
-            <p>Softwarepark 1</p>
-            <p>4232 Hagenberg</p>
-            <p>Österreich</p>
-        </div>
-        <div className="my-2">
-            <p><strong>Telefon:</strong></p>
-            <p>06745 495983 485039</p>
-        </div>
-        <div className="my-2">
-            <p><strong>E-mail:</strong></p>
-            <p>petadoption@hagenberg.at</p>
-        </div>
+      <main className="mx-auto my-28 max-w-4xl text-justify">
+          <div className="mt-3 flex flex-row gap-5">
+              <PawPrint /><h1>Contact Us</h1>
+          </div>
+          <p>
+              Thank you for your interest in our pet adoption website! We appreciate your questions, suggestions, and feedback.
+          </p><br/>
+          <div className="my-2">
+              <h2>Contact Information:</h2>
+              <p>Softwarepark 1</p>
+              <p>4232 Hagenberg</p>
+              <p>Austria</p>
+          </div><br/>
+          <div className="my-2">
+              <p><strong>Phone:</strong></p>
+              <p>06745 495983 485039</p>
+          </div><br/>
+          <div className="my-2">
+              <p><strong>Email:</strong></p>
+              <p>petadoption@hagenberg.at</p>
+          </div><br/>
+          <div className="my-2">
+              <p><strong>Opening Hours:</strong></p>
+              <p>Monday to Friday:</p>
+              <p>9:00 AM - 6:00 PM</p>
+              <p>Closed on Saturdays, Sundays, and holidays</p>
+          </div>
+      </main>
 
-        <div className="my-2">
-            <p><strong>Öffnungszeiten:</strong></p>
-            <p>Monntag bis Freitag:</p>
-            <p>9:00 - 18:00</p>
-            <p>Samstag und Sonntag geschlossen, sowie an Feiertagen</p>
-        </div>
-    </main>
   );
 }

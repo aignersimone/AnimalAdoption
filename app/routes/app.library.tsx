@@ -33,8 +33,8 @@ export default function AppLibrary() {
 
     return (
         <>
-            <h1>Unsere Vergabetiere</h1>
-            <p className="text-muted-foreground text-sm">Choose your partner for life.</p>
+            <h1>Our adoption animals:</h1>
+            <p className="text-muted-foreground text-sm">Choose your partner for life.<br/> To save them in cour favorites - click on the heart!</p>
             <Tabs className="my-4" tabs={tabs} activeTabId={selectedTab} onValueChange={handleTabChange} />
             <AnimalCardList animals={filteredAnimals} />
         </>

@@ -6,7 +6,7 @@ export function Sidebar() {
   return (
     <div className="sidebar">
       <section>
-        <h2 className="mb-2">Tieradoption</h2>
+        <h2 className="mb-2">Animal Adoption</h2>
 
         <div className="space-y-1">
           <Link to="/app" className="sidebar_link">
@@ -16,12 +16,12 @@ export function Sidebar() {
 
           <Link to="/app/library" className="sidebar_link">
             <PawPrint />
-            Vergabetiere
+            Adoption Animals
           </Link>
 
           <Link to="/app/favorites" className="sidebar_link">
             <HandHeart/>
-            Meine Favoriten
+            My Favorites
           </Link>
         </div>
       </section>

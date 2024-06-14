@@ -1,26 +1,30 @@
+import {PawPrint} from "lucide-react";
+
 export default function Adoption() {
-  return (
-    <main className="mx-auto my-28 max-w-4xl text-justify">
-      <h1>Adoptionsverfahren</h1>
-      <p className="mt-4">Vielen Dank für Ihr Interesse an der Adoption eines unserer Tiere! Wir möchten sicherstellen, dass jedes Tier in ein liebevolles und fürsorgliches Zuhause vermittelt wird. Unser Adoptionsverfahren besteht aus mehreren Schritten, um sicherzustellen, dass die Bedürfnisse des Tieres und die Bedingungen des neuen Zuhauses optimal erfüllt werden.</p>
-        <li className="mt-4 ms-6">
-          <b>Bewerbung:</b> Beginnen Sie den Adoptionsprozess, indem Sie eine Bewerbung ausfüllen. In dieser Bewerbung möchten wir mehr über Sie, Ihre Lebensumstände und Ihre Erfahrung mit Haustieren erfahren.
-        </li>
-        <li className="mt-4 ms-6">
-            <b>Vorabprüfung:</b> Nachdem wir Ihre Bewerbung erhalten haben, führen wir eine Vorabprüfung durch. Dies kann eine Überprüfung von Referenzen, eine Überprüfung des Wohnsitzes und möglicherweise ein Hausbesuch umfassen, um sicherzustellen, dass Ihr Zuhause sicher und tierfreundlich ist.
-        </li>
-        <li className="mt-4 ms-6">
-            <b>Persönliches Treffen:</b> Wenn die Vorabprüfung erfolgreich ist, vereinbaren wir einen Termin für ein persönliches Treffen mit dem Tier, das Sie adoptieren möchten. Dies ermöglicht es Ihnen, das Tier kennenzulernen und sicherzustellen, dass es gut zu Ihnen und Ihrem Lebensstil passt.
-        </li>
-        <li className="mt-4 ms-6">
-            <b>Adoptionsabschluss:</b> Nachdem Sie sich für ein Tier entschieden haben und die Adoption genehmigt wurde, werden die Adoptantenverträge unterzeichnet und eine Adoptionsgebühr wird erhoben. Diese Gebühr deckt oft die Kosten für Impfungen, Kastration/Sterilisation und andere medizinische Behandlungen des Tieres.
-        </li>
-        <li className="mt-4 ms-6">
-            <b>Nachbetreuung:</b> Unsere Unterstützung endet nicht mit der Adoption! Wir stehen Ihnen auch nach der Adoption weiterhin zur Verfügung, um Fragen zu beantworten, Ratschläge zu geben und sicherzustellen, dass die Integration Ihres neuen Haustiers reibungslos verläuft.
-        </li>
-        <p className="mt-4 ">
-          Wir glauben, dass die Adoption eines Haustieres eine lebenslange Verpflichtung ist und sind hier, um Sie während des gesamten Prozesses zu unterstützen. Wenn Sie bereit sind, Ihrem neuen pelzigen Freund ein liebevolles Zuhause zu geben, füllen Sie bitte unsere Bewerbung aus, und lassen Sie uns gemeinsam den Weg zu einer glücklichen Tieradoption beginnen!
-        </p>
-    </main>
-  );
+    return (
+        <main className="mx-auto my-28 max-w-4xl text-justify">
+            <div className="mt-3 flex flex-row gap-5">
+                <PawPrint /><h1>Adoption Process</h1>
+            </div>
+            <p className="mt-4">Thank you for your interest in adopting one of our animals! We want to ensure that each animal is placed in a loving and caring home. Our adoption process consists of several steps to ensure that the needs of the animal and the conditions of the new home are optimally met.</p>
+            <li className="mt-4 ms-6">
+                <b>Application:</b> Begin the adoption process by filling out an application. In this application, we want to learn more about you, your living conditions, and your experience with pets.
+            </li>
+            <li className="mt-4 ms-6">
+                <b>Pre-screening:</b> After receiving your application, we conduct a pre-screening. This may include reference checks, residence verification, and possibly a home visit to ensure that your home is safe and pet-friendly.
+            </li>
+            <li className="mt-4 ms-6">
+                <b>Personal Meeting:</b> If the pre-screening is successful, we schedule an appointment for a personal meeting with the animal you wish to adopt. This allows you to get to know the animal and ensure that it fits well with you and your lifestyle.
+            </li>
+            <li className="mt-4 ms-6">
+                <b>Adoption Finalization:</b> After you have decided on an animal and the adoption is approved, the adoption contracts are signed, and an adoption fee is collected. This fee often covers the cost of vaccinations, spaying/neutering, and other medical treatments for the animal.
+            </li>
+            <li className="mt-4 ms-6">
+                <b>Post-adoption Support:</b> Our support does not end with the adoption! We continue to be available to answer questions, provide advice, and ensure that your new pet's integration goes smoothly.
+            </li>
+            <p className="mt-4 ">
+                We believe that adopting a pet is a lifelong commitment and are here to support you throughout the entire process. If you are ready to give your new furry friend a loving home, please fill out our application, and let’s begin the journey to a happy pet adoption together!
+            </p>
+        </main>
+    );
 }
