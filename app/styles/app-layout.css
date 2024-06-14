@@ -24,3 +24,21 @@
   width:32rem;
   height:auto;
 }
+
+.linkbtn{
+  background-color: darkcyan;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid darkcyan;
+  text-decoration: none;
+}
+
+.linkbtn:hover{
+  border: 2px solid darkcyan;
+  color: darkcyan;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  background-color: transparent;
+}

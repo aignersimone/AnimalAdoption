@@ -1,4 +1,5 @@
 import {PawPrint} from "lucide-react";
+import {Link} from "@remix-run/react";
 
 export default function About() {
   return (
@@ -19,7 +20,10 @@ export default function About() {
           <p className="mt-4">
               Every animal on our site is excited to meet their new life partner and embark on countless adventures together. Start your journey today towards a life full of animal joy and unconditional love!
           </p>
-          <img src="https://img.freepik.com/premium-vector/tiger-paws-animal-paw-prints-vector-different-animals-footprints-black-white-background_603291-2052.jpg" alt="Paw Print" className="w-full"/>
+
+          <button className="linkbtn my-4"><Link to="/app/library"><b>Our adoption animals</b></Link></button>
+
+          <img src="https://img.freepik.com/premium-vector/tiger-paws-animal-paw-prints-vector-different-animals-footprints-black-white-background_603291-2052.jpg" alt="Paw Print" className="w-full mt-4"/>
       </main>
   );
 }

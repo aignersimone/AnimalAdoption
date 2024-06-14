@@ -8,7 +8,6 @@ export default function Contact() {
               <PawPrint className="linkcolor" /><h1>Contact Us</h1>
           </div>
           <img src="https://www.dognews.at/wp-content/uploads/2022/02/DNfrauhund5-1024x512.jpg" alt="omen with dog" className="contact-img py-4"/>
-
           <p>
               Thank you for your interest in our pet adoption website!</p>
           <p>   We appreciate your questions, suggestions, and feedback.

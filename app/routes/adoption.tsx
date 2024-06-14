@@ -1,5 +1,7 @@
 import {PawPrint} from "lucide-react";
 
+import {Link} from "@remix-run/react";
+
 export default function Adoption() {
     return (
         <main className="mx-auto my-28 max-w-4xl text-justify">
@@ -24,8 +26,10 @@ export default function Adoption() {
             </li>
             <p className="mt-4 ">
                 We believe that adopting a pet is a lifelong commitment and are here to support you throughout the entire process. If you are ready to give your new furry friend a loving home, please fill out our application, and let’s begin the journey to a happy pet adoption together!
-            </p><br/>
-            <img src="https://people.com/thmb/BJO005QLK6f4YcZHW0iONQxoJ1g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/family-adopt-dog-6c2f1eedd593433f85549e94e07af8bf.jpg" alt="Adopted Animal with family" className="w-full"/>
+            </p>
+            <button className="linkbtn my-4"><Link to="/app/library"><b>Our adoption animals</b></Link></button>
+            <img src="https://people.com/thmb/BJO005QLK6f4YcZHW0iONQxoJ1g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(999x0:1001x2)/family-adopt-dog-6c2f1eedd593433f85549e94e07af8bf.jpg" alt="Adopted Animal with family" className="w-full mt-4"/>
+
         </main>
     );
 }
