@@ -1,7 +1,7 @@
 import { Home, PawPrint, HandHeart } from 'lucide-react';
 import { Link } from '@remix-run/react';
 
-
+//Definition der Sidebar mit ihren dazugehörigen Links
 export function Sidebar() {
   return (
     <div className="sidebar">

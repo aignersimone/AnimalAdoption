@@ -1,11 +1,13 @@
 import React from 'react';
 
+//Typdefinition der Tabs
 type Tab = {
   id: string;
   title: string;
   disabled?: boolean;
 };
 
+//Tab-Properties definiert
 type TabsProps = {
   tabs: Tab[];
   activeTabId: string;
@@ -13,6 +15,7 @@ type TabsProps = {
   onValueChange: (tabId: string) => void;
 };
 
+//Die Tab "Rückgabe" definieren
 const Tabs: React.FC<TabsProps> = ({ tabs, activeTabId, onValueChange, className = '' }) => {
   return (
     <div className={`tabs ${className}`}>
